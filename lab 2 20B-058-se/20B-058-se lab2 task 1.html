@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> SYED MEASUM HASSAN (20B-058-SE) LAB 2 Task 1 </title>
+</head>
+
+<body>
+    <table id="studentNames" class="students">
+        <thead>
+            <tr>
+                <th>Student #</th>
+                <th>Student Name</th>
+                <th>Batch</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="row1" class="row">
+                <td>Student 1</td>
+                <td>Syed Measum Hassan</td>
+                <td>2020</td>
+            </tr>
+            <tr id="row2" class="row">
+                <td>Student 2</td>
+                <td>Samra Hassan</td>
+                <td>2019</td>
+            </tr>
+            <tr id="row3" class="row">
+                <td>Student 3</td>
+                <td>Daniyal Hassan</td>
+                <td>2021</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <input type="button" value="Add new student" onclick="addNewStudent()">
+    <input type="button" value="Delete student" onclick="deleteStudent()">
+    <input type="button" value="Update student" onclick="updateStudent()">
+</body>
+<script>
+    function addNewStudent() {
+        const body = document.querySelector('tbody');
+        const row = document.createElement('tr');
+        const tdStudentID = document.createElement('td');
+        const tdStudentName = document.createElement('td');
+        const tdBatch = document.createElement('td');
+        const studentId = ((Math.round(Math.random() * 100)) + 4);
+        const studentName = ((Math.round(Math.random() * 500)) + 50);
+        const batch = (Math.round(Math.random() * 2020)) + 2020;
+        row.id = 'row' + studentId;
+        tdStudentID.innerHTML = 'Student ' + studentId;
+        tdStudentName.innerHTML = 'Student - DOM - ' + studentName;
+        tdBatch.innerHTML = batch;
+        row.className = "row"
+        row.appendChild(tdStudentID);
+        row.appendChild(tdStudentName);
+        row.appendChild(tdBatch);
+        body.appendChild(row);
+    }
+    function deleteStudent() {
+        const studentId = prompt('Please enter Student ID');
+        if (studentId) {
+            console.log(studentId);
+            const row = document.getElementById('row' + studentId);
+            console.log(row);
+            if (row) {
+                const body = document.querySelector('tbody');
+                body.removeChild(row);
+            }
+        }
+    }
+
+    function updateStudent() {
+        const stud = prompt("Enter student id and batch with comma").split(',')
+        const id = stud[0];
+        const year = stud[1];
+        if (id) { document.getElementById(`row${id}`).children[2].innerHTML = year }
+    }
+</script>
+
+</html>

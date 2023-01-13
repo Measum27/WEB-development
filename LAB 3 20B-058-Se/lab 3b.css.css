@@ -1,0 +1,75 @@
+import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #6bc3e3;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.weatherhead {
+    font-size: 60px;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(228, 223, 72);
+}
+
+.row {
+    width: 650px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    color: white;
+}
+
+#search {
+    font-size: 25px;
+    padding: 8.5px;
+    border-radius: 20px;
+    border: darkblue;
+    outline: darkblue;
+    box-shadow: 4px 3px 10px grey;
+}
+
+.btn-search {
+    width: 90px;
+    height: 60px;
+    font-size: 19px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(214, 222, 78);
+    border-radius: 12px;
+    outline: darkblue;
+    border: darkgray;
+}
+
+.btn-search {
+    width: 90px;
+}
+
+.card-body {
+    text-align: center;
+}
+
+#cont {
+    background-color: rgb(225, 241, 39);
+}
+
+.load,
+.notfound {
+    text-align: center;
+    font-size: larger;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

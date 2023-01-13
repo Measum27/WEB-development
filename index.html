@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <form>
+            <h1>
+                Uit Login
+            </h1>
+            <div class="input">
+                <label for="user">User Id</label>
+                <input type="text" required>
+            </div>
+            <div class="input">
+                <label for="pass">Password</label>
+                <input type="text" required>
+            </div>
+            <div class="buttons">
+                <input type="button" value="Login" onclick="clickLogin(this)">
+                <input type="button" value="Cancel" onclick="clickCancel(this)">
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    function clickLogin(e){
+        alert("Login clicked!")
+    }
+    function clickCancel(e){
+        alert("Cancel clicked!")
+    }
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Measum Lab Tasks</title>
+</head>
+
+<body>
+    <div class="box">
+        <form>
+            <h2>
+               Uit Registration Portal
+            </h2>
+            <input type="text" placeholder="Enter Uit Email Address" required>
+            <input type="text" placeholder="Enter Password" required>
+            <div class="buttons">
+                <input type="button" value="Login" onClick=run(this)>
+                <input type="button" value="Cancel" onClick=run(this)>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+function run(e) {
+    if(e.value=="Login"){
+        alert("Login Button is clicked")
+    }
+    else if(e.value=="Cancel"){
+        alert("Cancel Button is clicked")
+    }
+}
+</script>
+</html>
